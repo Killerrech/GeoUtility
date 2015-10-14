@@ -7,7 +7,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import geofence.killerrech.com.geoutility.R;
 
 
 public class AddGeoFence extends ActionBarActivity {

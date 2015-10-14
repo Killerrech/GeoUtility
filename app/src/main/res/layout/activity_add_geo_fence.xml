@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         />
 
-     <geofence.killerrech.com.geoutility.SlidingTabLayout
+     <geofence.killerrech.com.GeoAlert.SlidingTabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

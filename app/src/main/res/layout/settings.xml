@@ -54,7 +54,7 @@
             android:id="@+id/spinnerProfileIn"
             android:gravity="right"
             android:layout_marginLeft="40dp"
-            android:entries="@array/profile"
+
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
@@ -81,7 +81,7 @@
             android:gravity="right"
             android:layout_marginLeft="40dp"
 
-            android:entries="@array/profile"
+
 
             android:layout_gravity="center_horizontal" />
 

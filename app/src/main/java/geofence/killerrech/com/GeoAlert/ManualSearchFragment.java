@@ -7,14 +7,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import geofence.killerrech.com.geoutility.R;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
 
 
 public class ManualSearchFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    GoogleMap googleMap;
+    View view;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -48,7 +53,54 @@ public class ManualSearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_manual_search, container, false);
+
+
+
+        view = inflater.inflate(R.layout.fragment_manual_search, container,
+                false);
+
+
+
+        googleMap =    ((SupportMapFragment) getChildFragmentManager()
+                .findFragmentById(R.id.map)).getMap();
+//                googleMap = ((SupportMapFragment) getChildFragmentManager()
+//                        .findFragmentById(R.id.map)).getMap();
+
+
+
+
+        // Loading map
+
+
+        // Changing map type
+        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        // googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        // googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        // googleMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+        // googleMap.setMapType(GoogleMap.MAP_TYPE_NONE);
+
+        // Showing / hiding your current location
+        googleMap.setMyLocationEnabled(true);
+
+        // Enable / Disable zooming controls
+        googleMap.getUiSettings().setZoomControlsEnabled(false);
+
+        // Enable / Disable my location button
+        googleMap.getUiSettings().setMyLocationButtonEnabled(true);
+
+        // Enable / Disable Compass icon
+        googleMap.getUiSettings().setCompassEnabled(true);
+
+        // Enable / Disable Rotate gesture
+        googleMap.getUiSettings().setRotateGesturesEnabled(true);
+
+        // Enable / Disable zooming functionality
+        googleMap.getUiSettings().setZoomGesturesEnabled(true);
+
+        // lets place some 10 random markers
+        System.out.println("enter in map");
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

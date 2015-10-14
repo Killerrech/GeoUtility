@@ -67,6 +67,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 + PROFILE_MODE_OUT + " TEXT,"
                 + GEO_NOTIFICATION + " TEXT );";
         db.execSQL(CREATE_SETTINGS_TABLE);
+        System.out.println("commiting this as change");
 
 
 
@@ -77,6 +78,8 @@ public class DBHelper extends SQLiteOpenHelper {
                 + GEO_NAME + " TEXT );";
         db.execSQL(CREATE_GEOLOCATION_TABLE);
         System.out.println("created tables");
+        System.out.println("created tables");
+
 
 
     }
