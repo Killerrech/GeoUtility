@@ -37,6 +37,7 @@ public class MainActivity extends FragmentActivity {
         tbController= TablesController.getTablesController(this);
         tbController.open();
         Cursor cr=tbController.getAllGeoLocation();
+        System.out.println("cursor length:::"+cr.getCount());
 
         if (cr.getCount()>0){
             cr.moveToFirst();
